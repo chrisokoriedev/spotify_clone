@@ -15,6 +15,8 @@ dependencies:
 
 
   cupertino_icons: ^1.0.8
+  flutter_svg: 
+  go_router: 
 
 dev_dependencies:
   flutter_test:
@@ -22,6 +24,14 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_gen_runner: ^5.8.0
   build_runner: 
+
+
+flutter_gen:
+  output: lib/assets/
+  line_length: 80
+
+  integrations:
+    flutter_svg: true
 
 
 flutter:

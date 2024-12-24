@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:spotify_clone/gen/assets.gen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:spotify_clone/assets/assets.gen.dart';
+import 'package:spotify_clone/presentation/intro/pages/get_started.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
-
   @override
   Widget build(BuildContext context) {
+    Future.microtask(() {
+      Future.delayed(const Duration(seconds: 3), () async {
+        // ignore: use_build_context_synchronously
+        context.push(GetStarted.routeName);
+      });
+    });
     return Scaffold(
-      body: Center(
-        child: Assets.images.introBg.image(),
-      ),
+      body: Center(child: Assets.icons.spotifyLogo.svg()),
     );
   }
 }
