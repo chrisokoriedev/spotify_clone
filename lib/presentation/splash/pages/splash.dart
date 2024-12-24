@@ -7,13 +7,10 @@ class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
   @override
   Widget build(BuildContext context) {
-    Future.microtask(() {
-      Future.delayed(const Duration(seconds: 3), () {
-        context.go(GetStarted.routeName);
-      });
-    });
-    return Scaffold(
-      body: Center(child: Assets.icons.spotifyLogo.svg()),
+    Future.microtask(
+      () => Future.delayed(
+          const Duration(seconds: 3), () => context.go(GetStarted.routeName)),
     );
+    return Scaffold(body: Center(child: Assets.icons.spotifyLogo.svg()));
   }
 }
