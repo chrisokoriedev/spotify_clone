@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/gen/assets.gen.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -7,7 +8,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('assets/images/splash.jpg'),
+        child: Assets.images.introBg.image(),
       ),
     );
   }
