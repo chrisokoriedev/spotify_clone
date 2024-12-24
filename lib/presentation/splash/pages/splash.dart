@@ -8,9 +8,8 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.microtask(() {
-      Future.delayed(const Duration(seconds: 3), () async {
-        // ignore: use_build_context_synchronously
-        context.push(GetStarted.routeName);
+      Future.delayed(const Duration(seconds: 3), () {
+        context.go(GetStarted.routeName);
       });
     });
     return Scaffold(
