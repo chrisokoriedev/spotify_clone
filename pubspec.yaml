@@ -18,6 +18,7 @@ dependencies:
   go_router:
   flutter_bloc:
   hydrated_bloc:
+  path_provider:
 
 dev_dependencies:
   flutter_test:
