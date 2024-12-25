@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:spotify_clone/presentation/choosemode/pages/choose_mode.dart';
 import 'package:spotify_clone/presentation/intro/pages/get_started.dart';
 import 'package:spotify_clone/presentation/splash/pages/splash.dart';
 
@@ -12,6 +13,10 @@ class AppRouter {
       GoRoute(
         path: GetStarted.routeName,
         builder: (context, state) => const GetStarted(),
+      ),
+      GoRoute(
+        path: ChooseModePage.routeName,
+        builder: (context, state) => const ChooseModePage(),
       ),
     ],
   );

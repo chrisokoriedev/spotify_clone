@@ -18,11 +18,12 @@ class BasicAppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ElevatedButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(height!),
-          textStyle: TextStyle(
-            fontSize: 16.spMin,
-            color: textColor,
-          )),
-      child: Text(title!));
+      style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(height!)),
+      child: Text(
+        title!,
+        style: TextStyle(
+          fontSize: 16.spMin,
+          color: textColor,
+        ),
+      ));
 }

@@ -9,7 +9,9 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.microtask(
       () => Future.delayed(
-          const Duration(seconds: 2), () => context.go(GetStarted.routeName)),
+        const Duration(seconds: 2),
+        () => context.go(GetStarted.routeName),
+      ),
     );
     return Scaffold(body: Center(child: Assets.icons.spotifyLogo.svg()));
   }

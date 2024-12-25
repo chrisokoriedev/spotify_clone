@@ -3,11 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spotify_clone/assets/assets.gen.dart';
 import 'package:spotify_clone/common/widget/button/basic_button.dart';
-import 'package:spotify_clone/presentation/choosemode/pages/choose_mode.dart';
 
-class GetStarted extends StatelessWidget {
-  static const routeName = '/get-started';
-  const GetStarted({super.key});
+class ChooseModePage extends StatelessWidget {
+  static const routeName = '/choose-mode';
+  const ChooseModePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +17,10 @@ class GetStarted extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.fill,
-            colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.15),
-              BlendMode.darken,
-            ),
-            image: Assets.images.introBg.provider(),
+            image: Assets.images.chooseModeBg.provider(),
           ),
         ),
-        child: Column(
+          child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -33,7 +28,7 @@ class GetStarted extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  'Enjoying listening To Music',
+                  'Choose your mode',
                   style: TextStyle(
                       fontSize: 18.spMin,
                       fontWeight: FontWeight.w600,
