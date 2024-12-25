@@ -11,14 +11,14 @@ class BasicAppButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     this.title,
-    this.height = 80,
+    this.height = 70,
     this.textColor = AppColors.white,
   });
 
   @override
   Widget build(BuildContext context) => ElevatedButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(height!)),
+      style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(height!.h)),
       child: Text(
         title!,
         style: TextStyle(
