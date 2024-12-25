@@ -28,18 +28,21 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => ThemeCubit()),
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
-          builder: (context, mode) => ScreenUtilInit(
-                designSize: const Size(428, 926),
-                minTextAdapt: true,
-                splitScreenMode: false,
-                ensureScreenSize: true,
-                builder: (context, _) => MaterialApp.router(
-                  title: 'Flutter Demo',
-                  debugShowCheckedModeBanner: false,
-                  theme: AppTheme.lightTheme,
-                  routerConfig: AppRouter.routes,
-                ),
-              )),
+        builder: (context, mode) => ScreenUtilInit(
+          designSize: const Size(428, 926),
+          minTextAdapt: true,
+          splitScreenMode: false,
+          ensureScreenSize: true,
+          builder: (context, _) => MaterialApp.router(
+            title: 'Flutter Demo',
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: mode,
+            routerConfig: AppRouter.routes,
+          ),
+        ),
+      ),
     );
   }
 }
