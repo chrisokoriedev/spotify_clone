@@ -5,7 +5,7 @@ import 'app_colors.dart';
 class AppTheme {
   static final lightTheme = ThemeData(
       primaryColor: AppColors.primary,
-      scaffoldBackgroundColor: AppColors.lightBackground,
+      scaffoldBackgroundColor: AppColors.white,
       brightness: Brightness.light,
       fontFamily: 'Satoshi',
       sliderTheme:
