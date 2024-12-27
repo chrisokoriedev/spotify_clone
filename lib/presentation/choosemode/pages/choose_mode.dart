@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:spotify_clone/assets/assets.gen.dart';
 import 'package:spotify_clone/common/widget/button/basic_button.dart';
 import 'package:spotify_clone/core/config/theme/app_colors.dart';
+import 'package:spotify_clone/presentation/auth/pages/choose_auth.dart';
 import 'package:spotify_clone/presentation/choosemode/bloc/theme_cubit.dart';
 
 class ChooseModePage extends StatelessWidget {
@@ -63,7 +64,7 @@ class ChooseModePage extends StatelessWidget {
                 ),
                 30.verticalSpace,
                 BasicAppButton(
-                  onPressed: () => context.push(ChooseModePage.routeName),
+                  onPressed: () => context.push(ChooseAuth.routeName),
                   title: 'Get Started',
                 ),
               ],
